@@ -255,10 +255,52 @@
         <div id="popup" class="popup">
             <div class="popup__body">
                 <div class="popup__content">
+                    <p class="form-text ">Оставьте свои данные, мы вам перезвоним</p>
+                    <form class="js-speaker-form">
+                        <div class="form-field">
+                            <label for="name">Имя</label>
+                            <input type="text" name="user-name" id="name">
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="tel">Телефон</label>
+                            <input type="tel" name="tel" id="tel">
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="mail">Почта</label>
+                            <input type="email" name="mail" id="mail">
+                        </div>
+                        
+                        <div class="form-field">
+                        <label for="coment">Комментарий</label>
+                        <textarea name="coment" id="coment" rows="10" placeholder="Введите текст"></textarea>
+                        </div>
+                        
+                        <label for="polici">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+                        <input type="checkbox" name="polici" id="polici">
+                    
+                        <button type="submit">Отправить</button>
+                    
+                    </form>
                     <a href="#" class="popup__close">X</a>
+                
                 </div>
             </div>
         </div>
+
+<!-- Для отправки форм -->
+        <script>
+    (() => {
+        document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+                console.log(`${name}: ${value}`),
+            );
+        });
+    })();
+        </script>
 
      </body>   
 </html>

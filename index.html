@@ -28,8 +28,8 @@
                 
                 
                     <ul class="auth-nav list">
-                        <li class="item"><a href="popup" class="link-adres">info@devstudio.com</a></li>
-                        <li class="item"><a href="popup" class="link-adres">+38 096 111 11 11</a></li>
+                        <li class="item"><a href="" class="link-adres">info@devstudio.com</a></li>
+                        <li class="item"><a href="" class="link-adres">+38 096 111 11 11</a></li>
                     </ul>
                 </nav>
         </header>
@@ -387,13 +387,64 @@
             </div>
         </footer>
 
-        <div id="popup" class="popup">
-            <div class="popup__body">
-                <div class="popup__content">
-                    <a href="#" class="popup__close">X</a>
-                </div>
+        <button data-modal-open>открыть модалку</button>
+       
+
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <p class="form-text ">Оставьте свои данные, мы вам перезвоним</p>
+
+                <form class="form js-speaker-form">
+                    <div class="form-field">
+                    <label for="name">Имя</label>
+                    <input type="text" name="user-name" id="name">
+                    </div>
+
+                    <div class="form-field">
+                    <label for="tel">Телефон</label>
+                    <input type="tel" name="tel" id="tel">
+                    </div>
+
+                    <div class="form-field">
+                    <label for="mail">Почта</label>
+                    <input type="email" name="mail" id="mail">
+                    </div>
+
+                    <div class="form-field">
+                    <label for="coment">Комментарий</label>
+                    <textarea name="coment" id="coment" rows="10" placeholder="Введите текст"></textarea>
+                    </div>
+
+                    <div class="topic-options">
+                    <label for="polici">Соглашаюсь с рассылкой и принимаю <span> Условия договора</span></label>
+                    <input type="checkbox" name="polici" id="polici">
+                    </div>
+                   
+                    <button class="submit" type="submit">Отправить</button>
+                   
+                </form>
+
+
+                <button class="popup__close" data-modal-close>Х</button>
             </div>
         </div>
+
+        <!-- Для открытия модального окна -->
+
+        <script src="./js/modal.js"></script>
+
+        <!-- Для отправки форм -->
+        <script>
+            (() => {
+                    document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+                        e.preventDefault();
+
+                        new FormData(e.currentTarget).forEach((value, name) =>
+                            console.log(`${name}: ${value}`),
+                        );
+                    });
+                })();
+        </script>
 
     </body>
 </html>
