@@ -1034,7 +1034,6 @@ font-family: 'Roboto';
     top: 8px;
     color: black;
     text-decoration: none;
-    border-radius: 50%;
 }
 
 
@@ -1086,6 +1085,8 @@ textarea {
 resize: none;
 padding-top: 12px;
 padding-left: 16px;
+border: 1px solid rgba(33, 33, 33, 0.2);
+
 }
 
 .form-text{
@@ -1116,6 +1117,8 @@ margin-bottom: 30px;
 }
 
 .form-field {
+    position: relative;
+
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -1130,18 +1133,34 @@ margin-bottom: 30px;
 }
 
 .form-field label{
+    position: absolute;
+    top: -10px;
+    transform: translateY(-50%);
     margin-bottom: 4px;
 }
 
 .form-field input {
     margin: 0;
-    padding: 12px 15px;
+    padding: 12px 42px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
+    cursor: pointer;
+    
 }
 
-.form-field input::placeholder {
-color: #2196F3;
+.form-field input:focus{
+    border: 1px solid #2196F3;  
+}
+
+
+.form-field input:placeholder-shown {
+    background-color: #2196f3;
+}
+
+
+.form-input:focus + .form-label {
+    
+    
 }
 
 .topic-options {
@@ -1151,6 +1170,10 @@ color: #2196F3;
 
 .topic-options input[type="checkbox"] {
     
+}
+
+.checkbox {
+    margin-right: 8.38px;
 }
 
 .topic-options label {
@@ -1165,8 +1188,20 @@ color: #2196F3;
     letter-spacing: 0.03em;
     
     color: #757575;
+}
 
-    outline: 1px solid tomato;
+.box-span {
+    padding-left: 5px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-decoration: underline;
+    
+    color:#2196F3;
 }
 
 .submit {
@@ -1175,18 +1210,46 @@ color: #2196F3;
     font-weight: 700;
     font-size: 16px;
     line-height: 30px;
-    /* identical to box height, or 188% */
 
     display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
+    margin-left: 121px;
+    margin-top: 30px;
+    
 
     color: var(--primary-white-color);
     display: inline-block;
     padding: 10px 56px;
 
     background: #188CE8;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 4px;
+
+    border: none;
+    border-radius: 4px;
+}
+
+.submit:focus{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+}
+
+.icon{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+
+    transform: translateY(-50%);
+
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+}
+
+.form-input ~ .icon{
+
+}
+
+.vector:hover{
+    fill: red;
 }
