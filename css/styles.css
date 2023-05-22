@@ -200,7 +200,7 @@ img {
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.02em;
-
+color.form-input ~ .icon
 }
 
 
@@ -231,7 +231,7 @@ img {
 }
 
 .link-tel {
-    fill: #AFB1B8;
+    fill: var(--accent-color);
 }
 
 .icone:hover {
@@ -1218,7 +1218,7 @@ margin-bottom: 30px;
 }
 
 .form-input ~ .icon {
-    background-color: #188CE8;
+    /* background-color: #188CE8; */
 
 }
 
