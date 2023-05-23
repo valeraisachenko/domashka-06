@@ -1310,6 +1310,12 @@ margin-bottom: 30px;
  
 }
 
+.checkbox:checked ~ .box-span {
+    transform: translateX(10px);
+}
+
+
+
 
 .topic-options label {
     display: flex;
@@ -1336,12 +1342,12 @@ margin-bottom: 30px;
     letter-spacing: 0.03em;
     
     
-    color: #757575;
-}
-
-.box-span:hover{
     text-decoration: underline;
     color: #2196F3;
+}
+
+.box-span {
+    transition: transform 250ms linear;
 }
 
 .submit {
