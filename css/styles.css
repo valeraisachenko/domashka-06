@@ -1311,7 +1311,7 @@ margin-bottom: 30px;
 }
 
 .checkbox:checked ~ .box-span {
-    transform: translateX(10px);
+    transform: translatey(-3px);
 }
 
 
@@ -1423,4 +1423,43 @@ margin-bottom: 30px;
     margin-left: 10px;
     background-image: url("../img/icon\ send.svg");
     background-size: contain;
+}
+
+.iconx {
+    width: 16px;
+    height: 12px;
+}
+
+.iconx  .letter {
+   fill: var(--title-text-color)
+}
+
+.iconxx {
+    width: 16px;
+    height: 20px;
+}
+
+.iconxx .letter {
+    fill: var(--title-text-color)
+}
+
+.iconxl {
+    width: 20px;
+    height: 20px;
+}
+
+.iconxl.letter.letter {
+    fill: var(--title-text-color)
+}
+
+.iconx .letter:hover {
+    fill: var(--accent-color);
+}
+
+.iconxl .letter:hover {
+    fill: var(--accent-color);
+}
+
+.iconxx .letter:hover {
+    fill: var(--accent-color);
 }
