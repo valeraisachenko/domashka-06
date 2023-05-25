@@ -215,6 +215,7 @@ img {
     margin-right: 10px;
 }
 
+
 .link-tel::before {
     display: inline-block;
     content: "";
@@ -1463,3 +1464,5 @@ margin-bottom: 30px;
 .iconxx .letter:hover {
     fill: var(--accent-color);
 }
+    
+
